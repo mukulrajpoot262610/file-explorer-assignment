@@ -1,6 +1,8 @@
 import React from 'react';
 import { ChevronDown, ChevronRightIcon, MoreHorizontal } from 'lucide-react';
 import Image from 'next/image';
+import FolderData from '@/public/data.list';
+import FolderCard from './FolderCard';
 
 const Explorer = () => {
   return (
@@ -19,17 +21,15 @@ const Explorer = () => {
         </div>
 
         <div className='w-full ml-2 p-1'>
-          <div className='flex mb-1 items-center'>
-            <ChevronRightIcon className='h-4 w-4 font-bold' />
-            <Image
-              src='/folder.svg'
-              height={20}
-              width={20}
-              alt='Folder'
-              className='mr-1'
+          {FolderData.map((folder) => (
+            <FolderCard
+              name={folder.name}
+              key={folder.id}
+              id={folder.id}
+              items={folder.items}
+              isFolder={folder.isFolder}
             />
-            <h2 className='font-semibold text-xs'>app</h2>
-          </div>
+          ))}
         </div>
       </div>
     </div>
