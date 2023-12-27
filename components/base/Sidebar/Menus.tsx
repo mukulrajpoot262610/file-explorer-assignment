@@ -14,7 +14,9 @@ import {
 const Menus = () => {
   return (
     <div className='w-12 bg-vscode-background-primary flex flex-col items-center py-2 text-vscode-foreground-dark'>
-      <AlignJustify className='h-4 w-4 mb-2' />
+      <div className='h-8 w-8 flex justify-center items-center cursor-pointer hover:text-vscode-text'>
+        <AlignJustify className='h-4 w-6 mb-2' />
+      </div>
 
       <div>
         <div className='h-12 w-12 border-l-2 flex justify-center items-center text-white cursor-pointer'>
