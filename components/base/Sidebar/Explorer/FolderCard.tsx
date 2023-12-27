@@ -17,7 +17,7 @@ const FolderCard = ({ name, id, isFolder, items }: FolderCardProps) => {
   return (
     <div>
       <div
-        className='flex mb-1 items-center'
+        className='flex mb-1 items-center group'
         onClick={() => setIsOpen(!isOpen)}
       >
         {isFolder ? (
@@ -49,7 +49,9 @@ const FolderCard = ({ name, id, isFolder, items }: FolderCardProps) => {
           </>
         )}
 
-        <h2 className='font-semibold text-xs'>{name}</h2>
+        <h2 className='font-semibold text-xs group-hover:text-vscode-text'>
+          {name}
+        </h2>
       </div>
       <div className='ml-3'>
         {isOpen &&
