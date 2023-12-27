@@ -34,7 +34,7 @@ const config = {
             secondary: '#1E1F2B',
           },
           foreground: {
-            dark: '#0E1017',
+            dark: '#525762',
           },
           text: '#87868B',
         },
